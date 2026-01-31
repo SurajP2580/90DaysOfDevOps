@@ -1,0 +1,22 @@
+Core Components of Linux
+
+The Kernel: The central, low-level part of the operating system. It acts as the primary interface between the hardware (CPU, memory, storage) and the software (user programs). Key kernel responsibilities include process management, memory management, and device control.
+
+User Space: This is where user applications, libraries, and utilities run. It is a protected memory area separate from the kernel space. When a user runs a command or application, it executes within user space.
+
+Init System (systemd): The first process launched when the system boots (PID 1). It is responsible for initializing the rest of the system, mounting filesystems, and starting system services and daemons. It manages the entire life cycle of the system from boot to shutdown. 
+
+Process State
+
+1. Running & Runnable (R)
+Running: The process is currently being executed by the CPU.
+Runnable: The process is ready to run and is waiting for CPU time in a queue.
+
+2. Sleeping / Blocked (S, D)
+The process is inactive, waiting for a specific event (like I/O completion, a timer, or a signal). 
+
+3. Stopped (T)
+The process has been paused or suspended, 
+
+4. Zombie (Z)
+A process that has finished execution (terminated) but still has an entry in the process table. 
